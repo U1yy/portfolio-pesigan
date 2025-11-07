@@ -45,7 +45,7 @@ export default function Portfolio() {
       link: "/student_info/main.html",
     },
     {
-      title: "Manage Subjects Page",
+      title: "School Website",
       img: "/iscp (1).png",
       description:
         "This is my very first website it previews a supposed school website haha.",
