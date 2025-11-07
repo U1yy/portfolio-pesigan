@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import {FaFacebookF, FaInstagram, FaGithub, FaXTwitter, FaDiscord,} from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaGithub,
+  FaXTwitter,
+  FaDiscord,
+} from "react-icons/fa6";
+import { toast } from "sonner"; 
 
 export default function Hero() {
-  const words = [
-    "a Student in CVSU-Bacoor",
-    "a 3rd Year",
-  ];
-
+  const words = ["a Student in CVSU-Bacoor", "a 3rd Year"];
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [copied, setCopied] = useState(false);
   const [speed, setSpeed] = useState(120);
 
   const discordTag = "ulysses0401";
@@ -39,14 +41,17 @@ export default function Hero() {
     return () => clearTimeout(handleTyping);
   }, [text, isDeleting, wordIndex, words, speed]);
 
-  // Discord tag function
+  
   const handleDiscordClick = async () => {
     try {
       await navigator.clipboard.writeText(discordTag);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
+      toast.success("Discord tag copied to clipboard!", {
+        description: `Copied: ${discordTag}`,
+        duration: 2000,
+      });
     } catch (err) {
-      console.error("Failed to copy Discord tag: ", err);
+      toast.error("Failed to copy Discord tag");
+      console.error("Failed to copy Discord tag:", err);
     }
   };
 
@@ -66,7 +71,7 @@ export default function Hero() {
         </span>
       </p>
 
-      {/* socmed icons */}
+      {/* social media icons */}
       <div className="flex space-x-6">
         <a
           href="https://www.facebook.com/james.carlo.pesigan.2025"
@@ -110,16 +115,10 @@ export default function Hero() {
 
         <button
           onClick={handleDiscordClick}
-          className="relative p-3 bg-white text-gray-800 rounded-full shadow-md 
+          className="p-3 bg-white text-gray-800 rounded-full shadow-md 
                      hover:bg-indigo-600 hover:text-white transition-all duration-300"
         >
           <FaDiscord size={22} />
-          {copied && (
-            <span className="absolute -top-8 left-1/2 -translate-x-1/2 
-                             bg-black text-white text-xs px-3 py-1 rounded-full animate-bounce">
-              Copied!
-            </span>
-          )}
         </button>
       </div>
     </section>

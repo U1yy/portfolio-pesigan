@@ -28,7 +28,7 @@ export default function Contact() {
       id="contact"
       className="py-20 bg-gray-800 text-white flex flex-col items-center"
     >
-      <h2 className="text-3xl font-bold mb-6 text-indigo-400">Contact Me</h2>
+      <h2 className="text-3xl font-bold mb-6 text-white">Contact Me</h2>
       <p className="text-gray-400 mb-10 text-center max-w-xl">
         Let’s connect! Whether it’s for collaboration, inquiries, or just to
         chat, feel free to reach out through any of my social platforms below.
@@ -42,7 +42,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="p-4 rounded-full bg-white text-gray-800 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
         >
-          <FaFacebookF size={28} />
+          <FaFacebookF size={20} />
         </a>
 
         {/* GitHub */}
@@ -52,7 +52,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="p-4 rounded-full bg-white text-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
         >
-          <FaGithub size={28} />
+          <FaGithub size={20} />
         </a>
 
         {/* Instagram */}
@@ -62,7 +62,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="p-4 rounded-full bg-white text-gray-800 hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
         >
-          <FaInstagram size={28} />
+          <FaInstagram size={20} />
         </a>
 
         {/* Twitter (X) */}
@@ -72,7 +72,7 @@ export default function Contact() {
           rel="noopener noreferrer"
           className="p-4 rounded-full bg-white text-gray-800 hover:bg-blue-400 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
         >
-          <FaXTwitter size={28} />
+          <FaXTwitter size={20} />
         </a>
 
         {/* Discord (Copy to Clipboard) */}
@@ -80,7 +80,7 @@ export default function Contact() {
           onClick={handleDiscordClick}
           className="p-4 rounded-full bg-white text-gray-800 hover:bg-indigo-600 hover:text-white transition-all duration-300 shadow-lg hover:scale-110"
         >
-          <FaDiscord size={28} />
+          <FaDiscord size={20} />
         </button>
       </div>
     </section>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Student Schedule</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+    <div id="navbar"></div>
+    <script>
+    fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+</head>
+<body>
+
+
+<!-- Form Container -->
+<div class="container mt-5">
+  <h2>Edit Student Schedule</h2>
+
+  <form>
+    <!-- Student ID -->
+    <div class="mb-3">
+      <label for="student_id" class="form-label">Student ID</label>
+      <select class="form-control" id="student_id" name="student_id" required>
+      </select>
+    </div>
+
+    <!-- Subject ID -->
+    <div class="mb-3">
+      <label for="subject_id" class="form-label">Subject ID</label>
+      <select class="form-control" id="subject_id" name="subject_id" required>
+      </select>
+    </div>
+
+    <!-- Start Time -->
+    <div class="mb-3">
+      <label for="start_time" class="form-label">Start Time</label>
+      <input type="time" class="form-control" id="start_time" name="start_time" required>
+    </div>
+
+    <!-- End Time -->
+    <div class="mb-3">
+      <label for="end_time" class="form-label">End Time</label>
+      <input type="time" class="form-control" id="end_time" name="end_time" required>
+    </div>
+
+    <!-- Day -->
+    <div class="mb-3">
+      <label for="day" class="form-label">Day</label>
+      <select class="form-control" id="day" name="day" required>
+      </select>
+    </div>
+
+    <!-- Room -->
+    <div class="mb-3">
+      <label for="room" class="form-label">Room</label>
+      <input type="text" class="form-control" id="room" name="room" placeholder="Enter Room Name" required>
+    </div>
+
+    <!-- Save Button -->
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5 py-3 bg-light text-muted fixed-bottom">
+  © 2025 My Dashboard | All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

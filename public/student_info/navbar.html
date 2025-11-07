@@ -1,0 +1,90 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+        height: 100%;
+        width: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #2e7d32;
+        overflow-x: hidden;
+        transition: 0.3s;
+        z-index: 1050;
+    }
+
+    .sidebar:hover {
+        width: 250px;
+    }
+
+    .sidebar a {
+        display: block;
+        color: white;
+        padding: 16px 20px;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: #1b5e20;
+    }
+
+    .sidebar img {
+        height: 40px;
+        margin-left: -10px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+
+    .sidebar:hover img {
+        margin-left: 20px;
+    }
+
+    .sidebar .text-label {
+        display: none;
+        margin-left: 15px;
+    }
+
+    .sidebar:hover .text-label {
+        display: inline;
+    }
+
+    /* Push main content when sidebar is expanded */
+    .main-content {
+        margin-left: 60px;
+        transition: margin-left 0.3s;
+        padding: 20px;
+    }
+
+    .sidebar:hover ~ .main-content {
+        margin-left: 250px;
+    }
+</style>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="main.html">
+        <img src="logo.png" alt="Logo">
+    </a>
+
+  <a href="search.html">🔍 <span class="text-label">Search</span></a>
+  <a href="main.html">🏠 <span class="text-label">Home</span></a>
+  <a href="edit_profile.html">📝 <span class="text-label">Edit Data</span></a>
+  <a href="view.html">📄 <span class="text-label">View Data</span></a>
+  <a href="edit-schedule.html">📥 <span class="text-label">Input Schedule</span></a>
+  <a href="schedule.html">📅 <span class="text-label">My Schedule</span></a>
+  <a href="assessment_input.html">🧮 <span class="text-label">Input Scores</span></a>
+  <a href="assessment_overview.html">📊 <span class="text-label">View Scores</span></a>
+  <a href="subject.html">📚 <span class="text-label">Subject</span></a>
+</div>
+
+<!-- Main content wrapper -->
+<div class="main-content">
+    <!-- Your page content here -->
+</div>
